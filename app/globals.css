@@ -77,6 +77,8 @@
   bottom: 150%;
   left: 50%;
   margin-left: -60px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
 }
 
 .tooltip:hover .tooltiptext {
