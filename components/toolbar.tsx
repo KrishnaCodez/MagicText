@@ -161,7 +161,7 @@ export function Toolbar({
             onClick={addText}
             variant="outline"
             size={"icon"}
-            className="rounded-full hover:animate-jelly tooltip shrink-0"
+            className="rounded-full hover:animate-jelly tooltip shrink-0 relative"
           >
             <span className="tooltiptext">Text</span>
             <Icons.text className="size-4" />
@@ -185,7 +185,7 @@ export function Toolbar({
                     <Button
                       variant="outline"
                       size={"icon"}
-                      className="rounded-full hover:animate-jelly tooltip shrink-0"
+                      className="rounded-full hover:animate-jelly tooltip shrink-0 relative"
                     >
                       <span className="tooltiptext">Font Family</span>
                       <Icons.font className="size-4" />
@@ -273,7 +273,7 @@ export function Toolbar({
                     <Button
                       variant="outline"
                       size={"icon"}
-                      className="rounded-full hover:animate-jelly tooltip shrink-0 "
+                      className="rounded-full hover:animate-jelly tooltip shrink-0 relative"
                       style={{
                         background: getBackgroundStyle(selectedTextProperties.fontColor),
                       }}
@@ -305,7 +305,7 @@ export function Toolbar({
                   onClick={selectedTextProperties.isTextSelected && showStrokeUI ? removeStroke : addStroke}
                   variant="outline"
                   size={"icon"}
-                  className="rounded-full hover:animate-jelly tooltip shrink-0"
+                  className="rounded-full hover:animate-jelly tooltip shrink-0 relative"
                 >
                   <span className="tooltiptext">{selectedTextProperties.isTextSelected && showStrokeUI ? "Remove Stroke" : "Stroke"}</span>
                   {selectedTextProperties.isTextSelected && showStrokeUI ? <Icons.removeStroke /> : <Icons.stroke />}                </Button>
@@ -327,7 +327,7 @@ export function Toolbar({
                         <Button
                           variant="outline"
                           size={"icon"}
-                          className="rounded-full hover:animate-jelly tooltip shrink-0 "
+                          className="rounded-full hover:animate-jelly tooltip shrink-0 relative"
                           onClick={updateStrokeWidth}
                         >
                           <span className="tooltiptext">Stroke</span>
@@ -340,7 +340,7 @@ export function Toolbar({
                         <Button
                           variant="outline"
                           size={"icon"}
-                          className="rounded-full hover:animate-jelly tooltip shrink-0 "
+                          className="rounded-full hover:animate-jelly tooltip shrink-0 relative"
                           onClick={() => {
                             setShowDuplicateStroke(!showDuplicateStroke);
                             console.log("Show Duplicate Stroke", showDuplicateStroke);
@@ -359,7 +359,7 @@ export function Toolbar({
                           <Button
                             variant="outline"
                             size={"icon"}
-                            className="rounded-full hover:animate-jelly tooltip shrink-0 "
+                            className="rounded-full hover:animate-jelly tooltip shrink-0 relative"
                             style={{
                               background: getBackgroundStyle(strokeSettings.color)
                             }}
@@ -395,7 +395,7 @@ export function Toolbar({
             variant="outline"
             size="icon"
             className={cn(
-              "rounded-full hover:animate-jelly tooltip shrink-0",
+              "rounded-full hover:animate-jelly tooltip shrink-0 relative",
               drawingSettings.isDrawing &&
               "ring-2 ring-green-500 ring-offset-2",
             )}
@@ -421,7 +421,7 @@ export function Toolbar({
                   onClick={incrementBrushSize}
                   variant="outline"
                   size="icon"
-                  className="rounded-full hover:animate-jelly tooltip shrink-0"
+                  className="rounded-full hover:animate-jelly tooltip shrink-0 relative"
                 >
                   <span className="tooltiptext">Brush Size</span>
                   {drawingSettings.brushSize}
@@ -431,7 +431,7 @@ export function Toolbar({
                     <Button
                       variant="outline"
                       size={"icon"}
-                      className="rounded-full hover:animate-jelly tooltip shrink-0 "
+                      className="rounded-full hover:animate-jelly tooltip shrink-0 relative"
                       style={{ backgroundColor: drawingSettings.brushColor }}
                     >
                       <span className="tooltiptext">Brush Color</span>
@@ -460,7 +460,7 @@ export function Toolbar({
             onClick={deleteSelectedObject}
             variant="outline"
             size={"icon"}
-            className="rounded-full hover:animate-jelly tooltip shrink-0"
+            className="rounded-full hover:animate-jelly tooltip shrink-0 relative"
           >
             <span className="tooltiptext">Delete</span>
             <Icons.trash className="size-4 text-red-600" />
@@ -472,7 +472,7 @@ export function Toolbar({
             onClick={downloadCanvas}
             variant="outline"
             size={"icon"}
-            className="rounded-full hover:animate-jelly tooltip shrink-0"
+            className="rounded-full hover:animate-jelly tooltip shrink-0 relative"
           >
             <span className="tooltiptext">Download</span>
             <Icons.download className="size-4" />
